@@ -1,0 +1,94 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+        <!-- First Image -->
+        <ImageButton
+            android:id="@+id/AR_obj"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.8"
+            app:layout_constraintDimensionRatio="320:197"
+            android:src="@drawable/ar_object"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="45dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+        <!-- First Button -->
+        <Button
+            android:id="@+id/obj"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.9"
+            android:background="@drawable/rounded_login"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="16dp"
+            android:text="FIND SURFACE"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/AR_obj"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" />
+
+        <!-- Second Image -->
+        <ImageButton
+            android:id="@+id/AR_pic"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent="0.8"
+            app:layout_constraintDimensionRatio="353:196"
+            android:src="@drawable/scan_picture"
+            android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/obj"
+            android:layout_marginTop="32dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" />
+
+        <!-- Second Button -->
+        <Button
+            android:id="@+id/pic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.9"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="16dp"
+            android:text="FIND PICTURE"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/AR_pic"
+            android:layout_marginTop="12dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" />
+
+        <!-- Bottom Button -->
+        <Button
+            android:id="@+id/viewMethod"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="1"
+            android:background="#0E4ECC"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="20dp"
+            android:text="CHOOSE VIEWING METHOD"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

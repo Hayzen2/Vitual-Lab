@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- AR Fragment -->
+    <fragment
+        android:id="@+id/arFragment"
+        android:name="com.google.ar.sceneform.ux.ArFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- Icon Buttons (Left Side) -->
+    <ImageButton
+        android:id="@+id/iconTarget"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintDimensionRatio="1:1"
+        android:src="@drawable/icon_target"
+        android:background="@drawable/circle_blue"
+        android:scaleType="centerInside"
+        android:padding="10dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/iconScan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <ImageButton
+        android:id="@+id/iconScan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintDimensionRatio="1:1"
+        android:src="@drawable/icon_scan"
+        android:background="@drawable/circle_blue"
+        android:scaleType="centerInside"
+        android:padding="11dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/iconTarget"
+        app:layout_constraintBottom_toTopOf="@id/iconLocationBlue"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/iconLocationBlue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintDimensionRatio="1:1"
+        android:src="@drawable/icon_location"
+        android:background="@drawable/circle_blue"
+        android:scaleType="centerInside"
+        android:padding="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/iconScan"
+        app:layout_constraintBottom_toTopOf="@id/iconLocationYellow"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/iconLocationYellow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintDimensionRatio="1:1"
+        android:src="@drawable/icon_location_yellow"
+        android:background="@drawable/circle_yellow"
+        android:scaleType="centerInside"
+        android:padding="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/iconLocationBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Info and Practice Buttons (Right Side) -->
+    <Button
+        android:id="@+id/infoButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:background="@drawable/rounded_button"
+        android:text="Info"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:elevation="4dp"
+    android:layout_marginEnd="16dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/practiceButton"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintVertical_chainStyle="packed"
+    app:layout_constraintVertical_bias="0.1" />
+
+    <Button
+        android:id="@+id/practiceButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:background="@drawable/rounded_button"
+        android:text="Practice"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:elevation="4dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="16dp"
+    app:layout_constraintTop_toBottomOf="@id/infoButton"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/modelsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:background="@drawable/rounded_button"
+        android:text="..."
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:elevation="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/practiceButton"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/autoRotateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto Rotate: OFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- Circular Joystick (Left) -->
+    <com.example.virtuallab.CircularJoystickView
+        android:id="@+id/joystickLeft"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_margin="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Vertical Joystick (Right) -->
+    <com.example.virtuallab.VerticalJoystickView
+        android:id="@+id/joystickRight"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintDimensionRatio="1:2.5"
+        android:layout_margin="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.example.virtuallab.HorizontalJoystickView
+        android:id="@+id/joystickRotate"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toEndOf="@id/joystickLeft"
+        app:layout_constraintEnd_toStartOf="@id/joystickRight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

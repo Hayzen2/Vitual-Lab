@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Use Material3 theme -->
+    <style name="Theme.VirtualLab" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Material3 color scheme -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryContainer">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryContainer">@color/teal_700</item>
+
+        <!-- Window attributes -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+
+        <!-- Custom button style for MaterialButton -->
+        <item name="materialButtonStyle">@style/RoundedMaterialButton</item>
+    </style>
+
+    <!-- Custom style for rounded buttons -->
+    <style name="RoundedMaterialButton" parent="Widget.Material3.Button">
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="cornerRadius">50dp</item> <!-- Ensure rounded corners -->
+    </style>
+</resources>
